@@ -41,7 +41,8 @@ def data_txt():
 
 @app.route("/weather_codes.html")
 def weather_codes():
-    with open('C:/Users/m_els/PycharmProjects/pythonProject1/Fishy/templates/data.txt') as data_file:
+#     with open('C:/Users/m_els/PycharmProjects/pythonProject1/Fishy/templates/data.txt') as data_file:
+    with open('C:/Users/m_els/PycharmProjects/pythonProject1/Fishy/data.txt') as data_file:
         # data_file = open('C:/Users/m_els/PycharmProjects/pythonProject1/Fishy/templates/data.txt')
         # data_file.close()
         for line in data_file:
