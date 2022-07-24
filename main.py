@@ -27,12 +27,26 @@ Y_PASSWORD = "gg36H2Pgz38gjQJ"
 
 @app.route('/')
 def home():
-    return render_template('index.html')
+    current_year = datatime.datetime.now().year
+    return render_template('index.html', year=current_year)
 
 
 @app.route("/hobbies.html")
 def hobbies():
     return render_template("hobbies.html")
+
+@app.route"/data.txt")
+def data_txt():
+    return render_template("data.txt")
+
+@app.route("/weather_codes.html")
+def weather_codes():
+    with open('C:/Users/m_els/PycharmProjects/pythonProject1/Fishy/templates/data.txt') as data_file:
+        # data_file = open('C:/Users/m_els/PycharmProjects/pythonProject1/Fishy/templates/data.txt')
+        # data_file.close()
+        for line in data_file:
+            print(line)
+        return render_template("weather_codes.html")
 
 
 @app.route("/contact.html")
@@ -40,10 +54,10 @@ def contact():
     return render_template("contact.html")
 
 
-@app.route("/login.html")
-def login():
-    login_form = LoginForm()
-    return render_template('login.html', form=login_form)
+# @app.route("/login.html")
+# def login():
+#     login_form = LoginForm()
+#     return render_template('login.html', form=login_form)
 
 
 #
