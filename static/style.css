@@ -1,10 +1,12 @@
       #title {
-            background-color: #d4edee;
-            color: #000;
+         /*   background-color: #d4edee; */
+            background-color:	#00FFFF;
+            color: #0000;
             }
 
        body {
-            background-color: #7ec8e3;
+            /* background-color: #7ec8e3; */
+            background-color:	#00BFFF;
             font-family: "Montserrat";
             }
 
@@ -42,12 +44,16 @@
 
         .navbar-brand {
             font-family: "ubuntu";
-            font-size: 2rem;
+            font-size: 1rem;
            }
 
         .nav-item{
            padding: 0 18;
            }
+
+        .navbar-nav .nav-item .nav-link {
+           color: black;
+            }
 
         .nav-link{
             font-size: 1rem;
@@ -55,6 +61,7 @@
 
          .container-fluid {
             padding: 3% 5%;
+            background-color:	#00BFFF;
             }
 
         .continue {
@@ -105,3 +112,5 @@
            background-color: #D1DCF4;
            text-align: center;
             }
+
+
