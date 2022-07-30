@@ -1,12 +1,8 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import DataRequired
 import datetime
-
-
-import smtplib
-import requests
 
 
 class LoginForm(FlaskForm):
@@ -21,7 +17,7 @@ app.secret_key = "BST1686tx"
 
 @app.route('/')
 def home():
-    current_year = datatime.datetime.now().year
+    current_year = datetime.datetime.now().year
     return render_template('index.html', year=current_year)
 
 
@@ -29,26 +25,19 @@ def home():
 def hobbies():
     return render_template("hobbies.html")
 
-@app.route"/data.txt")
-def data_txt():
+
+@app.route("/data.txt")
+def data():
     return render_template("data.txt")
 
-@app.route("/weather_codes.html")
-def weather_codes():
-    with open('C:/Users/m_els/PycharmProjects/pythonProject1/Fishy/templates/data.txt') as data_file:
-    with open('C:/Users/m_els/PycharmProjects/pythonProject1/Fishy/data.txt') as data_file:
-        # data_file = open('C:/Users/m_els/PycharmProjects/pythonProject1/Fishy/templates/data.txt')
-        # data_file.close()
-        for line in data_file:
-            print(line)
-        return render_template("weather_codes.html")
 
-
-
+@app.route("/fishing_conditions.html")
+def fishing_conditions():
+    return render_template("fishing_conditions.html")
 
 
 if __name__ == '__main__':
 
     app.run(debug=True)
 
-# send_email()
+
