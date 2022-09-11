@@ -4,13 +4,6 @@ from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import DataRequired
 import datetime
 
-
-class LoginForm(FlaskForm):
-    email = StringField('Email', validators=[DataRequired()])
-    password = PasswordField('Password', validators=[DataRequired()])
-    submit = SubmitField(label='Log In')
-
-
 app = Flask(__name__)
 app.secret_key = "BST1686tx"
 
@@ -24,11 +17,6 @@ def home():
 @app.route("/hobbies.html")
 def hobbies():
     return render_template("hobbies.html")
-
-
-@app.route("/data.txt")
-def data():
-    return render_template("data.txt")
 
 
 @app.route("/fishing_conditions.html")
