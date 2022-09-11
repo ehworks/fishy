@@ -1,7 +1,4 @@
 from flask import Flask, render_template
-from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, SubmitField
-from wtforms.validators import DataRequired
 import datetime
 
 
@@ -18,11 +15,6 @@ def home():
 @app.route("/hobbies.html")
 def hobbies():
     return render_template("hobbies.html")
-
-
-@app.route("/data.txt")
-def data():
-    return render_template("data.txt")
 
 
 @app.route("/fishing_conditions.html")
