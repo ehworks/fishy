@@ -5,12 +5,6 @@ from wtforms.validators import DataRequired
 import datetime
 
 
-class LoginForm(FlaskForm):
-    email = StringField('Email', validators=[DataRequired()])
-    password = PasswordField('Password', validators=[DataRequired()])
-    submit = SubmitField(label='Log In')
-
-
 app = Flask(__name__)
 app.secret_key = "BST1686tx"
 
