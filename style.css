@@ -120,8 +120,7 @@
             }
 
       .copyright{
-            -webkit-text-fill-color: gray;
-            
+        color: gray;              
         text-align:center;
         font-size:.75em;
             }
