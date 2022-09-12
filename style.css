@@ -111,12 +111,15 @@
             }
 
        .lawson{
-         padding: 0% 8%;
-        }
+           padding: 0% 8%;
+            }
 
         #contact-style{
            background-color: #D1DCF4;
            text-align: center;
             }
 
-
+      .copyright{
+        text-align:center;
+        font-size:15px;
+            }
