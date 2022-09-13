@@ -1,8 +1,22 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect
 import datetime
-
+from twilio.twiml.messaging_response import MessagingResponse
 
 app = Flask(__name__)
+
+@app.route("/sms", methods=['GET', 'POST'])
+def sms_reply():
+    """Respond to incoming call with text message"""
+    # Start TwiML response
+    resp = MessagingResponse()
+
+    # Add a message
+    resp.message("Thanks for your interest, Really")
+
+    return str(resp)
+
+
+
 
 
 
