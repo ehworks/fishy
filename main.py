@@ -3,7 +3,7 @@ import datetime
 
 
 app = Flask(__name__)
-# app.secret_key = "BST1686tx"
+
 
 
 @app.route('/')
