@@ -4,6 +4,13 @@ from twilio.twiml.messaging_response import MessagingResponse
 
 app = Flask(__name__)
 
+
+@app.route('/')
+def home():
+    current_year = datetime.datetime.now().year
+    return render_template('index.html', year=current_year)
+
+
 @app.route("/sms", methods=['GET', 'POST'])
 def sms_reply():
     """Respond to incoming call with text message"""
@@ -15,15 +22,6 @@ def sms_reply():
 
     return str(resp)
 
-
-
-
-
-
-@app.route('/')
-def home():
-    current_year = datetime.datetime.now().year
-    return render_template('index.html', year=current_year)
 
 
 @app.route("/hobbies.html")
