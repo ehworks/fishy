@@ -11,7 +11,7 @@ def home():
     return render_template('index.html', year=current_year)
 
 
-@app.route("/sms", methods=['GET', 'POST'])
+@app.route("/sms", methods=['POST'])
 def sms_reply():
     """Respond to incoming call with text message"""
     # Start TwiML response
